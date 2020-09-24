@@ -1,14 +1,278 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+   "widgets":[
+      {
+         "type":"pie",
+         "dataTypes":[
+            {
+               "typeId":1,
+               "typeName":"SIP Call",
+               "kpi":[
+                  {
+                     "id":0,
+                     "name":"Totale Chiamate"
+                  },
+                  {
+                     "id":1,
+                     "name":"Totale Chiamate Mute"
+                  },
+                  {
+                     "id":2,
+                     "name":"Totale Chiamate LTE su 3G"
+                  }
+               ],
+               "dimensions":[
+                  {
+                     "id":0,
+                     "name":"Sonde"
+                  },
+                  {
+                     "id":1,
+                     "name":"Response Code"
+                  },
+                  {
+                     "id":2,
+                     "name":"user Agent"
+                  }
+               ],
+               "granularity":[
+                  {
+                     "id":0,
+                     "name":"Ore"
+                  },
+                  {
+                     "id":1,
+                     "name":"Giorni"
+                  },
+                  {
+                     "id":2,
+                     "name":"Mesi"
+                  }
+               ],
+               "filters":[
+                  {
+                     "id":0,
+                     "name":"User Agent",
+                     "type":"string"
+                  },
+                  {
+                     "id":1,
+                     "name":"Response Code",
+                     "type":"int",
+                     "options":[
+                        {
+                           "id":0,
+                           "text":"(0) Not Available"
+                        },
+                        {
+                           "id":200,
+                           "text":"(200) OK"
+                        },
+                        {
+                           "id":500,
+                           "text":"(500) Internal Server Error"
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "typeId":2,
+               "typeName":"DNS",
+               "kpi":[
+                  {
+                     "id":5,
+                     "name":"Totale Sessioni"
+                  }
+               ],
+               "dimensions":[
+                  {
+                     "id":0,
+                     "name":"Sonde"
+                  },
+                  {
+                     "id":3,
+                     "name":"Response Code"
+                  },
+                  {
+                     "id":4,
+                     "name":"Query Name"
+                  }
+               ],
+               "granularity":[
+                  {
+                     "id":0,
+                     "name":"Ore"
+                  },
+                  {
+                     "id":1,
+                     "name":"Giorni"
+                  },
+                  {
+                     "id":2,
+                     "name":"Mesi"
+                  }
+               ],
+               "filters":[
+                  {
+                     "id":2,
+                     "name":"Query Name",
+                     "type":"string"
+                  },
+                  {
+                     "id":3,
+                     "name":"Response Code",
+                     "type":"int",
+                     "options":[
+                        {
+                           "id":0,
+                           "text":"(0) Not Available"
+                        },
+                        {
+                           "id":200,
+                           "text":"(200) OK"
+                        },
+                        {
+                           "id":500,
+                           "text":"(500) Internal Server Error"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type":"timeseries",
+         "dataTypes":[
+            {
+               "typeId":1,
+               "typeName":"SIP Call",
+               "kpi":[
+                  {
+                     "id":0,
+                     "name":"Totale Chiamate"
+                  },
+                  {
+                     "id":1,
+                     "name":"Totale Chiamate Mute"
+                  },
+                  {
+                     "id":2,
+                     "name":"Totale Chiamate LTE su 3G"
+                  },
+                  {
+                     "id":3,
+                     "name":"Tempo Medio di Conversazione"
+                  },
+                  {
+                     "id":4,
+                     "name":"Tempo Medio di Setup"
+                  }
+               ],
+               "dimensions":[
+                  {
+                     "id":0,
+                     "name":"Campioni"
+                  },
+                  {
+                     "id":1,
+                     "name":"Oraria"
+                  },
+                  {
+                     "id":2,
+                     "name":"Giornaliera"
+                  },
+                  {
+                     "id":3,
+                     "name":"Mensile"
+                  }
+               ],
+               "filters":[
+                  {
+                     "id":1,
+                     "name":"User Agent",
+                     "type":"string"
+                  },
+                  {
+                     "id":2,
+                     "name":"Response Code",
+                     "type":"int",
+                     "options":[
+                        {
+                           "id":0,
+                           "text":"(0) Not Available"
+                        },
+                        {
+                           "id":200,
+                           "text":"(200) OK"
+                        },
+                        {
+                           "id":500,
+                           "text":"(500) Internal Server Error"
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "typeId":2,
+               "typeName":"DNS",
+               "kpi":[
+                  {
+                     "id":5,
+                     "name":"Totale Sessioni"
+                  },
+                  {
+                     "id":6,
+                     "name":"Tempo Medio di Risposta"
+                  }
+               ],
+               "dimensions":[
+                  {
+                     "id":0,
+                     "name":"Campioni"
+                  },
+                  {
+                     "id":1,
+                     "name":"Oraria"
+                  },
+                  {
+                     "id":2,
+                     "name":"Giornaliera"
+                  },
+                  {
+                     "id":3,
+                     "name":"Mensile"
+                  }
+               ],
+               "filters":[
+                  {
+                     "id":2,
+                     "name":"Query Name",
+                     "type":"string"
+                  },
+                  {
+                     "id":3,
+                     "name":"Response Code",
+                     "type":"int",
+                     "options":[
+                        {
+                           "id":0,
+                           "text":"(0) Not Available"
+                        },
+                        {
+                           "id":200,
+                           "text":"(200) OK"
+                        },
+                        {
+                           "id":500,
+                           "text":"(500) Internal Server Error"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
 }
